@@ -3,10 +3,10 @@ from django.db import models
 # Create your models here.
 
 
-class service(models.Model):
+class Service(models.Model):
     title = models.CharField(max_length=50)
     content = models.CharField(max_length=50)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='service')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)
 
