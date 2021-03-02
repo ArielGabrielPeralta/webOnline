@@ -25,11 +25,11 @@
 
 {% endfor %}
 <section>
-    <div style="width: 75%; margin: auto; text-align: center; color: white;">
+    <div class="categories">
         Categories:
         {% for post in posts %}
         {% for category in post.categories.all %}
-        {{category.name}}/
+        <a href="{% url 'Category' category.id %}" class="linksCategory">{{category.name}}</a> &nbsp;
         {% endfor %}
         {% endfor %}
     </div>

@@ -29,7 +29,7 @@
         Categories:
         {% for post in posts %}
         {% for category in post.categories.all %}
-        {{category.name}}/
+        {{category.name}}
         {% endfor %}
         {% endfor %}
     </div>

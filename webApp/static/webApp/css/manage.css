@@ -79,6 +79,22 @@ p {
   background-color: rgba(255, 255, 255, 0.85);
 }
 
+.categories{
+  width: 75%;
+  margin: auto;
+  text-align: center;
+  color: white;
+}
+
+.linksCategory{
+  color: white !important;
+  text-decoration: underline;
+}
+
+.linksCategory:hover{
+text-decoration: none;
+}
+
 #mainNav {
   background-color: rgba(24, 64, 8);
   font-family: 'Raleway';
