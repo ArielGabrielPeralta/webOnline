@@ -9,7 +9,3 @@ def home(request):
 
 def shop(request):
     return render(request, 'webApp/shop.html')
-
-
-def contact(request):
-    return render(request, 'webApp/contact.html')
