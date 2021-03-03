@@ -25,6 +25,8 @@ class Product(models.Model):
     available = models.BooleanField(default=True)
     product_categories = models.ForeignKey(
         ProductCategory, on_delete=models.CASCADE)
+    created = models.DateTimeField(auto_now=True)
+    updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         verbose_name = 'product'
