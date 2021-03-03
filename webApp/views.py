@@ -5,7 +5,3 @@ from django.shortcuts import render, HttpResponse
 
 def home(request):
     return render(request, 'webApp/home.html')
-
-
-def shop(request):
-    return render(request, 'webApp/shop.html')
