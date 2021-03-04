@@ -21,15 +21,15 @@
 
   <h1 class="site-heading text-center text-white d-none d-lg-block">
 
-    <span class="site-heading-lower">Gestión de Pedidos</span>
+    <span class="site-heading-lower">Order Management</span>
   </h1>
 
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark py-4" id="mainNav">
     <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">Gestión de
-        Pedidos</a>
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'Home' %}">Management
+        Orders</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -37,16 +37,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item {% if request.path == '/' %} active {% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Inicio</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Home' %}">Home</a>
           </li>
           <li class="nav-item {% if request.path == '/service/' %} active {% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Service' %}">Servicios</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Service' %}">Service</a>
           </li>
           <li class="nav-item {% if request.path == '/shop/' %} active {% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Shop' %}">Tienda</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Shop' %}">Shop</a>
           </li>
           <li class="nav-item {% if request.path == '/contact/' %} active {% endif %} px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contact' %}">Contacto</a>
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'Contact' %}">Contact</a>
           </li>
           <li class="nav-item {% if request.path|slice:':6' == '/blog/' %} active {% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
@@ -85,11 +85,11 @@
         </a>
       </p>
       <p class="m-0 mbt">
-        <a href="sample.html" class="link">Política de privacidad</a> ·
-        <a href="sample.html" class="link">Aviso legal</a> ·
+        <a href="sample.html" class="link">Privacy Policy</a> ·
+        <a href="sample.html" class="link">Legal warning</a> ·
         <a href="sample.html" class="link">Cookies</a>
       </p>
-      <p class="m-0 mbt1">&copy; Gestión de Pedidos 2020</p>
+      <p class="m-0 mbt1">&copy; Order Management 2020</p>
     </div>
   </footer>
 
