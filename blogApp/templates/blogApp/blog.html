@@ -27,10 +27,8 @@
 <section>
     <div class="categories">
         Categories:
-        {% for post in posts %}
-        {% for category in post.categories.all %}
+        {% for category in categories %}
         <a href="{% url 'Category' category.id %}" class="linksCategory">{{category.name}}</a> &nbsp;
-        {% endfor %}
         {% endfor %}
     </div>
 </section>

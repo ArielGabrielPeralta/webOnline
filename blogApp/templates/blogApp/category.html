@@ -12,11 +12,11 @@
             <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{post.image.url}}" alt="Responsive image">
             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                 <h2 class="section-heading mb-4">
-                    <span class="section-heading-lower">{{product.title}}</span>
-                    <span class="section-heading-upper">{{product.content}}</span>
+                    <span class="section-heading-lower">{{post.title}}</span>
+                    <span class="section-heading-upper">{{post.content}}</span>
                 </h2>
                 <div style="text-align: left; font-size: 0.8em;">
-                    Brand: {{product.brand}}
+                    Auth: {{post.auth}}
                 </div>
             </div>
         </div>
@@ -25,12 +25,10 @@
 
 {% endfor %}
 <section>
-    <div class="categories">
+    <div style="width: 75%; margin: auto; text-align: center; color: white;">
         Categories:
-        {% for product in products %}
-        {% for category in product.product_categories.all %}
-        <a href="{% url 'Category' category.id %}" class="linksCategory">{{category.name}}</a> &nbsp;
-        {% endfor %}
+        {% for post in posts %}
+        {{category.name}}
         {% endfor %}
     </div>
 </section>
