@@ -301,3 +301,10 @@ ul.errorlist{
   border-radius: 5px;
   padding: 1px 0px;
 }
+
+.product-grid5{font-family:Poppins,sans-serif;position:relative; }
+.product-grid5 .product-image5 img{width:100%;height:30em}
+.product-grid5 .product-content{width:100%;padding:20px 10px; background-color: rgba(24, 64, 8);}
+.product-grid5 .title{font-size:30px;font-weight:700;text-transform:capitalize;}
+.product-grid5 .title {color:rgb(223, 204, 204)}
+.product-grid5 .price{color:rgb(216, 179, 179);font-size:30px;font-weight:500;letter-spacing:1px}

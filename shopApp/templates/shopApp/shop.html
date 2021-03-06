@@ -3,28 +3,28 @@
 {% load static %}
 
 {% block content %}
+<div class="container-fluid p-5">
+    <div class="row p-1">
+        {% for product in products %}
 
-{% for product in products %}
-
-<section class="page-section clearfix">
-    <div class="container">
-        <div class="intro">
-            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{product.image.url}}" alt="Responsive image">
-            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                <h2 class="section-heading mb-4">
-                    <span class="section-heading-lower">{{product.name}}</span>
-                    <span class="section-heading-upper">{{product.description}}</span>
-                    <span class="section-heading-upper">{{product.price}}</span>
-                </h2>
-                <div style="text-align: left; font-size: 0.8em;">
-                    Brand: {{product.brand}}
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 p-2 ">
+            <div class="product-grid5">
+                <div class="product-image5">
+                    <img class="pic-1" src="{{product.image.url}}" alt="">
+                </div>
+                <div class="product-content">
+                    <h3 class="title">
+                        <span>{{product.name}}</span>
+                        <span class="text-right">${{product.price}}</span>
+                    </h3>
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-{% endfor %}
+        {% endfor %}
+    </div>
+
+</div>
 <section>
     <div class="categories">
         Categories:
