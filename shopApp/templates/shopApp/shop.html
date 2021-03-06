@@ -4,16 +4,17 @@
 
 {% block content %}
 
-{% for post in posts %}
+{% for product in products %}
 
 <section class="page-section clearfix">
     <div class="container">
         <div class="intro">
-            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{post.image.url}}" alt="Responsive image">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{product.image.url}}" alt="Responsive image">
             <div class="intro-text left-0 text-center bg-faded p-5 rounded">
                 <h2 class="section-heading mb-4">
-                    <span class="section-heading-lower">{{product.title}}</span>
-                    <span class="section-heading-upper">{{product.content}}</span>
+                    <span class="section-heading-lower">{{product.name}}</span>
+                    <span class="section-heading-upper">{{product.description}}</span>
+                    <span class="section-heading-upper">{{product.price}}</span>
                 </h2>
                 <div style="text-align: left; font-size: 0.8em;">
                     Brand: {{product.brand}}
@@ -27,10 +28,8 @@
 <section>
     <div class="categories">
         Categories:
-        {% for product in products %}
-        {% for category in product.product_categories.all %}
-        <a href="{% url 'Category' category.id %}" class="linksCategory">{{category.name}}</a> &nbsp;
-        {% endfor %}
+        {% for category in categories %}
+        <a href="{% url 'ProductCategory' category.id %}" class="linksCategory">{{category.name}}</a> &nbsp;
         {% endfor %}
     </div>
 </section>

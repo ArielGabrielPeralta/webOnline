@@ -10,7 +10,7 @@ def shop(request):
     return render(request, 'shopApp/shop.html', {"products": product_list, "categories": categories})
 
 
-def productcategory(request, product_categories_id):
-    category = ProductCategory.objects.get(id=product_categories_id)
-    products = Product.objects.filter(categories=category)
-    return render(request, 'shopApp/categories.html', {'category': category, 'product': products})
+def productcategory(request, category_id):
+    category = ProductCategory.objects.get(id=category_id)
+    product = Product.objects.filter(product_categories=category)
+    return render(request, 'shopApp/categories.html', {'categories': category, 'products': product})
