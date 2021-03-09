@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from registerApp import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -22,8 +23,10 @@ urlpatterns = [
     path('blog/', include('blogApp.urls')),
     path('contact/', include('contactApp.urls')),
     path('shop/', include('shopApp.urls')),
+    path('register/', v.register, name='register'),
 
     path('', include('webApp.urls')),
+    path('', include('django.contrib.auth.urls')),
 
 
 ]
