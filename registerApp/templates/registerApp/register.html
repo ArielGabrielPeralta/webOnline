@@ -4,7 +4,7 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<form action="" method="post" class="form-group" style="color: aqua;">
+<form action="" method="post" class="form-group mt-2" style="color: aqua; background-color:  rgba(24, 64, 8);">
     {% csrf_token %}
     {{form|crispy}}
     <button type="submit" class="btn btn-success">Register</button>
