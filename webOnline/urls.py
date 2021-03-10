@@ -24,6 +24,7 @@ urlpatterns = [
     path('contact/', include('contactApp.urls')),
     path('shop/', include('shopApp.urls')),
     path('register/', v.register, name='register'),
+    path('', include('django.contrib.auth.urls')),
 
     path('', include('webApp.urls')),
     path('', include('django.contrib.auth.urls')),

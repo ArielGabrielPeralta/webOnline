@@ -9,7 +9,7 @@ def register(response):
         form = RegisterForm(response.POST)
         if form.is_valid():
             form.save()
-        return redirect("home")
+        return redirect("Home")
     else:
         form = RegisterForm()
     return render(response, "registerApp/register.html", {'form': form})

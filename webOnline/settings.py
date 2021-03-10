@@ -146,3 +146,5 @@ EMAIL_HOST_USER = "eralta80@gmail.com"
 EMAIL_HOST_PASSWORD = ""
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+LOGIN_REDIRECT_URL = "/"
