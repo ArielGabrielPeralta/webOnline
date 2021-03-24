@@ -51,15 +51,28 @@
           <li class="nav-item {% if request.path|slice:':6' == '/blog/' %} active {% endif %} px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="{% url 'Blog' %}">Blog</a>
           </li>
-
+          {% if user.is_authenticated %}
+          <li class="nav-item {% if request.path|slice:':6' == '/profile/' %} active {% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="">{{user.get_username}}</a>
+          </li>
+          <li class="nav-item {% if request.path|slice:':6' == '/profile/' %} active {% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'logout' %}">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item {% if request.path|slice:':6' == '/profile/' %} active {% endif %} px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="{% url 'login' %}">Login</a>
+          </li>
+          {% endif %}
         </ul>
       </div>
     </div>
   </nav>
 
+
   {% block content %}
 
   {% endblock %}
+
 
   <!-- Footer -->
   <footer class="footer text-faded text-center py-5">

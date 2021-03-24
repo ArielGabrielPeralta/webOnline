@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'contactApp',
     'shopApp',
     'registerApp',
+    'cartApp',
 ]
 
 MIDDLEWARE = [
@@ -148,3 +149,4 @@ EMAIL_HOST_PASSWORD = ""
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
